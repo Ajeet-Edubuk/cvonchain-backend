@@ -14,11 +14,11 @@ router.route("/checkout").post(checkout);
 
 router.route("/paymentverification").post(paymentVerification);
 
-router.route("/coupon-verification").post(couponVerification);
+router.route("/coupon_verification/:couponCode").post(couponVerification);
 
-router.route("/cvsubmitted-status/:paymentId").get(checkCvSubmittedStatus);
+router.route("/cvsubmitted_status/:paymentId").get(checkCvSubmittedStatus);
 
-router.route("/update-cv-status").put(updateCvSubmittedStatus);
+router.route("/update_cv_status").put(updateCvSubmittedStatus);
 
 router.post("/createCW",createTreasuryWallet);
 

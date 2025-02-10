@@ -1,9 +1,10 @@
-import { app } from "./app.js";
+
 import { connectDB } from "./config/database.js";
 import paymentRoute from "./routes/paymentRoutes.js";
 import cors from "cors";
 import express from "express";
 import dotenv from 'dotenv';
+const app = express();
 dotenv.config();
 connectDB();
 app.use(cors());
